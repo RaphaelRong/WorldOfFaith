@@ -24,6 +24,9 @@
 		64A6504B1805988F006E7AF9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A650261805988F006E7AF9 /* UIKit.framework */; };
 		64A650531805988F006E7AF9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64A650511805988F006E7AF9 /* InfoPlist.strings */; };
 		64A650551805988F006E7AF9 /* WorldOfFaithTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A650541805988F006E7AF9 /* WorldOfFaithTests.m */; };
+		64A6506318059A1F006E7AF9 /* WOFController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A6506218059A1F006E7AF9 /* WOFController.m */; };
+		64A6506618059A52006E7AF9 /* WOFNewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A6506518059A52006E7AF9 /* WOFNewGameViewController.m */; };
+		64A6506A18059ABA006E7AF9 /* Race.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64A6506918059ABA006E7AF9 /* Race.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,12 @@
 		64A650501805988F006E7AF9 /* WorldOfFaithTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WorldOfFaithTests-Info.plist"; sourceTree = "<group>"; };
 		64A650521805988F006E7AF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		64A650541805988F006E7AF9 /* WorldOfFaithTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorldOfFaithTests.m; sourceTree = "<group>"; };
+		64A6506118059A1F006E7AF9 /* WOFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFController.h; sourceTree = "<group>"; };
+		64A6506218059A1F006E7AF9 /* WOFController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFController.m; sourceTree = "<group>"; };
+		64A6506418059A52006E7AF9 /* WOFNewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOFNewGameViewController.h; sourceTree = "<group>"; };
+		64A6506518059A52006E7AF9 /* WOFNewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOFNewGameViewController.m; sourceTree = "<group>"; };
+		64A6506918059ABA006E7AF9 /* Race.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Race.plist; sourceTree = "<group>"; };
+		64A6506C1805A762006E7AF9 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,11 +130,12 @@
 		64A6502A1805988F006E7AF9 /* WorldOfFaith */ = {
 			isa = PBXGroup;
 			children = (
+				64A6506B1805A73D006E7AF9 /* Common */,
+				64A6506718059A6C006E7AF9 /* Plist */,
+				64A6505E180599D1006E7AF9 /* Controller */,
 				64A650331805988F006E7AF9 /* WOFAppDelegate.h */,
 				64A650341805988F006E7AF9 /* WOFAppDelegate.m */,
 				64A650361805988F006E7AF9 /* Main.storyboard */,
-				64A650391805988F006E7AF9 /* WOFViewController.h */,
-				64A6503A1805988F006E7AF9 /* WOFViewController.m */,
 				64A6503C1805988F006E7AF9 /* WOFMyScene.h */,
 				64A6503D1805988F006E7AF9 /* WOFMyScene.m */,
 				64A6503F1805988F006E7AF9 /* Spaceship.png */,
@@ -162,6 +172,59 @@
 				64A650511805988F006E7AF9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		64A6505E180599D1006E7AF9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				64A65060180599EA006E7AF9 /* NewGame */,
+				64A6505F180599DD006E7AF9 /* IndexMenu */,
+				64A6506118059A1F006E7AF9 /* WOFController.h */,
+				64A6506218059A1F006E7AF9 /* WOFController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		64A6505F180599DD006E7AF9 /* IndexMenu */ = {
+			isa = PBXGroup;
+			children = (
+				64A650391805988F006E7AF9 /* WOFViewController.h */,
+				64A6503A1805988F006E7AF9 /* WOFViewController.m */,
+			);
+			name = IndexMenu;
+			sourceTree = "<group>";
+		};
+		64A65060180599EA006E7AF9 /* NewGame */ = {
+			isa = PBXGroup;
+			children = (
+				64A6506418059A52006E7AF9 /* WOFNewGameViewController.h */,
+				64A6506518059A52006E7AF9 /* WOFNewGameViewController.m */,
+			);
+			name = NewGame;
+			sourceTree = "<group>";
+		};
+		64A6506718059A6C006E7AF9 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				64A6506818059A7A006E7AF9 /* Charactor */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		64A6506818059A7A006E7AF9 /* Charactor */ = {
+			isa = PBXGroup;
+			children = (
+				64A6506918059ABA006E7AF9 /* Race.plist */,
+			);
+			name = Charactor;
+			sourceTree = "<group>";
+		};
+		64A6506B1805A73D006E7AF9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				64A6506C1805A762006E7AF9 /* Constant.h */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +307,7 @@
 				64A6502F1805988F006E7AF9 /* InfoPlist.strings in Resources */,
 				64A650421805988F006E7AF9 /* Images.xcassets in Resources */,
 				64A650401805988F006E7AF9 /* Spaceship.png in Resources */,
+				64A6506A18059ABA006E7AF9 /* Race.plist in Resources */,
 				64A650381805988F006E7AF9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +329,9 @@
 			files = (
 				64A650311805988F006E7AF9 /* main.m in Sources */,
 				64A650351805988F006E7AF9 /* WOFAppDelegate.m in Sources */,
+				64A6506318059A1F006E7AF9 /* WOFController.m in Sources */,
 				64A6503B1805988F006E7AF9 /* WOFViewController.m in Sources */,
+				64A6506618059A52006E7AF9 /* WOFNewGameViewController.m in Sources */,
 				64A6503E1805988F006E7AF9 /* WOFMyScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

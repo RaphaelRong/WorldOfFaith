@@ -7,7 +7,7 @@
 //
 
 #import "WOFViewController.h"
-#import "WOFMyScene.h"
+#import "Constant.h"
 
 @implementation WOFViewController
 
@@ -15,31 +15,21 @@
 {
     [super viewDidLoad];
 
-    // Configure the view.
-    SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
-    
-    // Create and configure the scene.
-    SKScene * scene = [WOFMyScene sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
-    
-    // Present the scene.
-    [skView presentScene:scene];
+//    // Configure the view.
+//    SKView * skView = (SKView *)self.view;
+//    skView.showsFPS = YES;
+//    skView.showsNodeCount = YES;
+//    
+//    // Create and configure the scene.
+//    SKScene * scene = [WOFMyScene sceneWithSize:skView.bounds.size];
+//    scene.scaleMode = SKSceneScaleModeAspectFill;
+//    
+//    // Present the scene.
+//    [skView presentScene:scene];
 }
 
-- (BOOL)shouldAutorotate
-{
-    return YES;
-}
-
-- (NSUInteger)supportedInterfaceOrientations
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskAllButUpsideDown;
-    } else {
-        return UIInterfaceOrientationMaskAll;
-    }
+- (IBAction)newGamePressed:(UIButton *)sender {
+    [self performSegueWithIdentifier:FROM_INDEXMENU_TO_NEW_GAME sender:self];
 }
 
 - (void)didReceiveMemoryWarning
